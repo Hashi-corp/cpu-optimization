@@ -1,0 +1,4 @@
+strategy,backend_mode,semantic_mode,avg_latency_ms,p95_latency_ms,throughput_qps,hit_rate_pct,misses,exact_hits,semantic_hits,speedup_vs_baseline,avg_memory_mb
+Baseline,simulated,lexical,164.21,172.22,6.09,0.0,20,0,0,1.0,21.89
+Exact Cache,simulated,lexical,98.49,172.22,10.15,40.0,12,8,0,1.67,13.52
+Semantic Cache,simulated,lexical,74.84,172.22,13.36,55.0,9,8,3,2.19,9.95
