@@ -1,0 +1,41 @@
+{
+  "description": "Focused workload for benchmarking exact and semantic response caching against the current baseline.",
+  "prompt_groups": [
+    {
+      "id": "cpu-opt-1",
+      "canonical": "Explain how semantic caching reduces repeated LLM inference cost on CPU servers.",
+      "paraphrases": [
+        "How does semantic caching lower repeated CPU inference cost for LLM serving?",
+        "Why can semantic caches reduce the cost of repeated LLM requests on CPU?"
+      ],
+      "exact_repeats": 2
+    },
+    {
+      "id": "cpu-opt-2",
+      "canonical": "Describe why quantization helps large language models run faster on CPUs.",
+      "paraphrases": [
+        "Why does quantization make LLM inference faster on CPU hardware?",
+        "Explain how lower precision weights improve CPU performance for language models."
+      ],
+      "exact_repeats": 2
+    },
+    {
+      "id": "cpu-opt-3",
+      "canonical": "Summarize the role of KV-cache in long-context transformer generation.",
+      "paraphrases": [
+        "What does the KV cache do for long-context transformer decoding?",
+        "Explain why a KV cache matters during long-context text generation."
+      ],
+      "exact_repeats": 2
+    },
+    {
+      "id": "cpu-opt-4",
+      "canonical": "List practical optimizations for running transformer inference efficiently on CPU.",
+      "paraphrases": [
+        "What practical tricks help transformer inference run efficiently on CPUs?",
+        "Name useful optimizations for efficient CPU-based transformer inference."
+      ],
+      "exact_repeats": 2
+    }
+  ]
+}

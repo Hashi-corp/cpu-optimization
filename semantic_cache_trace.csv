@@ -1,0 +1,61 @@
+strategy,query_index,group_id,variant,cache_event,latency_ms,tokens_generated,memory_mb,response_preview
+Baseline,1,cpu-opt-1,canonical,miss,172.10664861474606,19,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
+Baseline,2,cpu-opt-1,exact_repeat_1,miss,172.10664861474606,19,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
+Baseline,3,cpu-opt-1,exact_repeat_2,miss,172.10664861474606,19,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
+Baseline,4,cpu-opt-1,paraphrase_1,miss,165.08292095708822,25,23.034922867707476,Simulated response for: How does semantic caching lower repeated CPU inf
+Baseline,5,cpu-opt-1,paraphrase_2,miss,174.45302224089895,25,23.044086124303426,Simulated response for: Why can semantic caches reduce the cost of repea
+Baseline,6,cpu-opt-2,canonical,miss,168.13503485078456,19,19.033479627881018,Simulated response for: Describe why quantization helps large language m
+Baseline,7,cpu-opt-2,exact_repeat_1,miss,168.13503485078456,19,19.033479627881018,Simulated response for: Describe why quantization helps large language m
+Baseline,8,cpu-opt-2,exact_repeat_2,miss,168.13503485078456,19,19.033479627881018,Simulated response for: Describe why quantization helps large language m
+Baseline,9,cpu-opt-2,paraphrase_1,miss,169.2249564765334,20,24.35263239143195,Simulated response for: Why does quantization make LLM inference faster 
+Baseline,10,cpu-opt-2,paraphrase_2,miss,169.8164483111447,19,20.228277731424505,Simulated response for: Explain how lower precision weights improve CPU 
+Baseline,11,cpu-opt-3,canonical,miss,150.79181878252365,22,20.935950399299166,Simulated response for: Summarize the role of KV-cache in long-context t
+Baseline,12,cpu-opt-3,exact_repeat_1,miss,150.79181878252365,22,20.935950399299166,Simulated response for: Summarize the role of KV-cache in long-context t
+Baseline,13,cpu-opt-3,exact_repeat_2,miss,150.79181878252365,22,20.935950399299166,Simulated response for: Summarize the role of KV-cache in long-context t
+Baseline,14,cpu-opt-3,paraphrase_1,miss,162.94309709317398,20,23.901849518092355,Simulated response for: What does the KV cache do for long-context trans
+Baseline,15,cpu-opt-3,paraphrase_2,miss,157.41287488703418,23,22.80358572476047,Simulated response for: Explain why a KV cache matters during long-conte
+Baseline,16,cpu-opt-4,canonical,miss,166.21888671751847,23,19.35885298655077,Simulated response for: List practical optimizations for running transfo
+Baseline,17,cpu-opt-4,exact_repeat_1,miss,166.21888671751847,23,19.35885298655077,Simulated response for: List practical optimizations for running transfo
+Baseline,18,cpu-opt-4,exact_repeat_2,miss,166.21888671751847,23,19.35885298655077,Simulated response for: List practical optimizations for running transfo
+Baseline,19,cpu-opt-4,paraphrase_1,miss,167.69651037139116,19,24.93362921506412,Simulated response for: What practical tricks help transformer inference
+Baseline,20,cpu-opt-4,paraphrase_2,miss,145.8112322457197,24,24.582174489421597,Simulated response for: Name useful optimizations for efficient CPU-base
+Exact Cache,1,cpu-opt-1,canonical,miss,172.10664861474606,19,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
+Exact Cache,2,cpu-opt-1,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Exact Cache,3,cpu-opt-1,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Exact Cache,4,cpu-opt-1,paraphrase_1,miss,165.08292095708822,25,23.034922867707476,Simulated response for: How does semantic caching lower repeated CPU inf
+Exact Cache,5,cpu-opt-1,paraphrase_2,miss,174.45302224089895,25,23.044086124303426,Simulated response for: Why can semantic caches reduce the cost of repea
+Exact Cache,6,cpu-opt-2,canonical,miss,168.13503485078456,19,19.033479627881018,Simulated response for: Describe why quantization helps large language m
+Exact Cache,7,cpu-opt-2,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Describe why quantization helps large language m
+Exact Cache,8,cpu-opt-2,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Describe why quantization helps large language m
+Exact Cache,9,cpu-opt-2,paraphrase_1,miss,169.2249564765334,20,24.35263239143195,Simulated response for: Why does quantization make LLM inference faster 
+Exact Cache,10,cpu-opt-2,paraphrase_2,miss,169.8164483111447,19,20.228277731424505,Simulated response for: Explain how lower precision weights improve CPU 
+Exact Cache,11,cpu-opt-3,canonical,miss,150.79181878252365,22,20.935950399299166,Simulated response for: Summarize the role of KV-cache in long-context t
+Exact Cache,12,cpu-opt-3,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Summarize the role of KV-cache in long-context t
+Exact Cache,13,cpu-opt-3,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Summarize the role of KV-cache in long-context t
+Exact Cache,14,cpu-opt-3,paraphrase_1,miss,162.94309709317398,20,23.901849518092355,Simulated response for: What does the KV cache do for long-context trans
+Exact Cache,15,cpu-opt-3,paraphrase_2,miss,157.41287488703418,23,22.80358572476047,Simulated response for: Explain why a KV cache matters during long-conte
+Exact Cache,16,cpu-opt-4,canonical,miss,166.21888671751847,23,19.35885298655077,Simulated response for: List practical optimizations for running transfo
+Exact Cache,17,cpu-opt-4,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: List practical optimizations for running transfo
+Exact Cache,18,cpu-opt-4,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: List practical optimizations for running transfo
+Exact Cache,19,cpu-opt-4,paraphrase_1,miss,167.69651037139116,19,24.93362921506412,Simulated response for: What practical tricks help transformer inference
+Exact Cache,20,cpu-opt-4,paraphrase_2,miss,145.8112322457197,24,24.582174489421597,Simulated response for: Name useful optimizations for efficient CPU-base
+Semantic Cache,1,cpu-opt-1,canonical,miss,172.10664861474606,19,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
+Semantic Cache,2,cpu-opt-1,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Semantic Cache,3,cpu-opt-1,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Semantic Cache,4,cpu-opt-1,paraphrase_1,semantic_hit,0.25,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Semantic Cache,5,cpu-opt-1,paraphrase_2,miss,174.45302224089895,25,23.044086124303426,Simulated response for: Why can semantic caches reduce the cost of repea
+Semantic Cache,6,cpu-opt-2,canonical,miss,168.13503485078456,19,19.033479627881018,Simulated response for: Describe why quantization helps large language m
+Semantic Cache,7,cpu-opt-2,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Describe why quantization helps large language m
+Semantic Cache,8,cpu-opt-2,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Describe why quantization helps large language m
+Semantic Cache,9,cpu-opt-2,paraphrase_1,miss,169.2249564765334,20,24.35263239143195,Simulated response for: Why does quantization make LLM inference faster 
+Semantic Cache,10,cpu-opt-2,paraphrase_2,miss,169.8164483111447,19,20.228277731424505,Simulated response for: Explain how lower precision weights improve CPU 
+Semantic Cache,11,cpu-opt-3,canonical,miss,150.79181878252365,22,20.935950399299166,Simulated response for: Summarize the role of KV-cache in long-context t
+Semantic Cache,12,cpu-opt-3,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Summarize the role of KV-cache in long-context t
+Semantic Cache,13,cpu-opt-3,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Summarize the role of KV-cache in long-context t
+Semantic Cache,14,cpu-opt-3,paraphrase_1,semantic_hit,0.25,0,0.0,Simulated response for: Summarize the role of KV-cache in long-context t
+Semantic Cache,15,cpu-opt-3,paraphrase_2,miss,157.41287488703418,23,22.80358572476047,Simulated response for: Explain why a KV cache matters during long-conte
+Semantic Cache,16,cpu-opt-4,canonical,miss,166.21888671751847,23,19.35885298655077,Simulated response for: List practical optimizations for running transfo
+Semantic Cache,17,cpu-opt-4,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: List practical optimizations for running transfo
+Semantic Cache,18,cpu-opt-4,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: List practical optimizations for running transfo
+Semantic Cache,19,cpu-opt-4,paraphrase_1,miss,167.69651037139116,19,24.93362921506412,Simulated response for: What practical tricks help transformer inference
+Semantic Cache,20,cpu-opt-4,paraphrase_2,semantic_hit,0.25,0,0.0,Simulated response for: List practical optimizations for running transfo
