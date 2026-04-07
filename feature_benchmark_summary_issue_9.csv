@@ -1,0 +1,2 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#9 concurrent cpu sampling,simulated,2026-04-07T11:13:37.952880+00:00,Concurrent sampling (workers=4),157.8855643775548,164.09709606509924,1694.029956461107,8.8,327.790592,,ThreadPool-based parallel request execution

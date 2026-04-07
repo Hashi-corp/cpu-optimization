@@ -1,0 +1,13 @@
+issues_executed,group_id,variant,latency_ms,tokens_generated,response_preview
+9,cpu-opt-1,canonical,160.90000207491912,21,batch cpu model quant serve cache serve model decode cpu decode token quant cpu decode ser
+9,cpu-opt-1,exact_repeat_1,160.90000207491912,21,batch cpu model quant serve cache serve model decode cpu decode token quant cpu decode ser
+9,cpu-opt-1,exact_repeat_2,160.90000207491912,21,batch cpu model quant serve cache serve model decode cpu decode token quant cpu decode ser
+9,cpu-opt-1,paraphrase_1,164.99005041319367,20,latency model model batch cpu cpu thread latency latency batch quant batch model model mod
+9,cpu-opt-1,paraphrase_2,160.5649339156469,21,cache batch quant quant cache model decode model decode quant quant serve serve cpu cpu de
+9,cpu-opt-2,canonical,163.366497053022,20,cache quant batch token cpu latency thread token cache decode decode decode decode cache m
+9,cpu-opt-2,exact_repeat_1,163.366497053022,20,cache quant batch token cpu latency thread token cache decode decode decode decode cache m
+9,cpu-opt-2,exact_repeat_2,163.366497053022,20,cache quant batch token cpu latency thread token cache decode decode decode decode cache m
+9,cpu-opt-2,paraphrase_1,149.42550080528827,20,cpu quant decode cpu quant model serve token latency batch thread token token model serve 
+9,cpu-opt-2,paraphrase_2,159.3840454828133,22,decode model cpu batch model batch cpu batch serve decode token latency batch decode cache
+9,cpu-opt-3,canonical,143.73137226494612,25,token decode thread decode thread token serve serve token cache model cache token token ca
+9,cpu-opt-3,exact_repeat_1,143.73137226494612,25,token decode thread decode thread token serve serve token cache model cache token token ca
