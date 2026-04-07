@@ -198,7 +198,7 @@ def build_backend() -> Tuple[InferenceBackend, Optional[str]]:
     try:
         return HuggingFaceBackend(MODEL_ID), None
     except Exception as exc:
-        return SimulatedBackend(), str(exc)
+        raise RuntimeError(f"Native backend initialization failed: {exc}") from exc
 
 
 def distinct1(text: str) -> float:
@@ -317,19 +317,30 @@ def run_speculative_benchmark(backend: InferenceBackend, queries: List[QueryItem
 
 def run_openvino_benchmark(backend: InferenceBackend, queries: List[QueryItem]) -> pd.DataFrame:
     rows: List[Dict[str, Any]] = []
-    mode = "simulated"
+    mode = "native"
     latencies: List[float] = []
     memories: List[float] = []
-    for q in queries[:6]:
-        result = backend.generate(q.prompt)
-        latencies.append(result["latency_ms"] * 0.82)
-        memories.append(result["memory_mb"] * 0.88)
-    try:
-        from optimum.intel.openvino import OVModelForCausalLM  # noqa: F401
+    from optimum.intel.openvino import OVModelForCausalLM
+    from transformers import AutoTokenizer
 
-        mode = "native"
-    except Exception:
-        mode = "simulated"
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    ov_model = OVModelForCausalLM.from_pretrained(MODEL_ID, export=True)
+
+    proc = psutil.Process()
+    for q in queries[:6]:
+        inputs = tokenizer(q.prompt, return_tensors="pt")
+        mem_before = proc.memory_info().rss / 1e6
+        t0 = time.perf_counter()
+        output_ids = ov_model.generate(**inputs, max_new_tokens=MAX_NEW_TOKENS, do_sample=False)
+        elapsed_ms = (time.perf_counter() - t0) * 1000
+        mem_after = proc.memory_info().rss / 1e6
+        _ = tokenizer.decode(output_ids[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+        latencies.append(elapsed_ms)
+        memories.append(max(mem_after - mem_before, 0.0))
+
     rows.append({
         "issue": "#3 openvino implementation feature",
         "strategy": "OpenVINO backend",
@@ -348,27 +359,24 @@ def run_onnx_benchmark(backend: InferenceBackend, queries: List[QueryItem]) -> p
     rows: List[Dict[str, Any]] = []
     latencies: List[float] = []
     memories: List[float] = []
-    onnx_mode = "simulated"
-    try:
-        from onnx_optimizer import ORTInferenceSession
+    onnx_mode = "native"
+    from onnx_optimizer import ORTInferenceSession, export_to_onnx, quantize_onnx_dynamic
 
-        candidate_dirs = [ROOT / "onnx_int8", ROOT / "onnx_base"]
-        model_dir = next((path for path in candidate_dirs if path.exists()), None)
-        if model_dir is not None:
-            session = ORTInferenceSession(str(model_dir), label="ORT")
-            for q in queries[:6]:
-                result = session.generate(q.prompt, max_new_tokens=MAX_NEW_TOKENS)
-                latencies.append(result["latency_ms"])
-                memories.append(result["memory_mb"])
-            onnx_mode = "native"
-    except Exception:
-        onnx_mode = "simulated"
+    candidate_dirs = [ROOT / "onnx_int8", ROOT / "onnx_base"]
+    model_dir = next((path for path in candidate_dirs if path.exists()), None)
+    if model_dir is None:
+        onnx_base = export_to_onnx(MODEL_ID, str(ROOT))
+        try:
+            onnx_int8 = quantize_onnx_dynamic(onnx_base, str(ROOT))
+            model_dir = Path(onnx_int8)
+        except Exception:
+            model_dir = Path(onnx_base)
 
-    if not latencies:
-        for q in queries[:6]:
-            result = backend.generate(q.prompt)
-            latencies.append(result["latency_ms"] * 0.86)
-            memories.append(result["memory_mb"] * 0.92)
+    session = ORTInferenceSession(str(model_dir), label="ORT")
+    for q in queries[:6]:
+        result = session.generate(q.prompt, max_new_tokens=MAX_NEW_TOKENS)
+        latencies.append(result["latency_ms"])
+        memories.append(result["memory_mb"])
 
     rows.append({
         "issue": "#8 onnx imp on the main dashboard and summary.df",

@@ -1,13 +1,37 @@
 issues_executed,group_id,variant,latency_ms,tokens_generated,response_preview
-4,cpu-opt-1,canonical,165.46027154716035,19,latency latency token batch decode decode token quant cache quant model latency cpu cache 
-4,cpu-opt-1,exact_repeat_1,165.46027154716035,19,latency latency token batch decode decode token quant cache quant model latency cpu cache 
-4,cpu-opt-1,exact_repeat_2,165.46027154716035,19,latency latency token batch decode decode token quant cache quant model latency cpu cache 
-4,cpu-opt-1,paraphrase_1,162.21786427748077,23,token token model decode decode cpu cache decode serve token quant decode model token late
-4,cpu-opt-1,paraphrase_2,166.0663546787708,23,model batch thread token quant cpu token serve thread batch quant cpu cache batch cpu serv
-4,cpu-opt-2,canonical,150.7286429466404,23,latency decode quant thread token decode batch thread latency latency thread batch batch c
-4,cpu-opt-2,exact_repeat_1,150.7286429466404,23,latency decode quant thread token decode batch thread latency latency thread batch batch c
-4,cpu-opt-2,exact_repeat_2,150.7286429466404,23,latency decode quant thread token decode batch thread latency latency thread batch batch c
-4,cpu-opt-2,paraphrase_1,149.62108823012602,24,quant thread cache batch token token quant token batch quant thread serve serve latency la
-4,cpu-opt-2,paraphrase_2,155.98003113828824,27,batch token model batch decode batch decode model batch batch quant cpu decode model quant
-4,cpu-opt-3,canonical,150.39504192870515,25,latency latency decode cache decode token quant token cache cache cache thread decode toke
-4,cpu-opt-3,exact_repeat_1,150.39504192870515,25,latency latency decode cache decode token quant token cache cache cache thread decode toke
+4,cpu-opt-1,canonical,2555.6044000004476,36,"
+
+The following code snippet shows how to use the LLM cache to reduce the time it takes to"
+4,cpu-opt-1,exact_repeat_1,2602.690800000346,36,"
+
+The following code snippet shows how to use the LLM cache to reduce the time it takes to"
+4,cpu-opt-1,exact_repeat_2,2587.150700001075,36,"
+
+The following code snippet shows how to use the LLM cache to reduce the time it takes to"
+4,cpu-opt-1,paraphrase_1,2677.3704000006546,36,"
+
+The answer is that semantic caching reduces the time it takes to compute a single value "
+4,cpu-opt-1,paraphrase_2,2606.5461999987747,36,"
+
+The answer is that semantic caches are not a good solution for the problem of cache loca"
+4,cpu-opt-2,canonical,2713.8520999997127,36,"
+
+The following is a list of the most popular languages for large-scale numerical analysis"
+4,cpu-opt-2,exact_repeat_1,2599.8768000008567,36,"
+
+The following is a list of the most popular languages for large-scale numerical analysis"
+4,cpu-opt-2,exact_repeat_2,2565.046900001107,36,"
+
+The following is a list of the most popular languages for large-scale numerical analysis"
+4,cpu-opt-2,paraphrase_1,2556.417900001179,36,"
+
+The answer is that it makes LLM inference faster on CPU hardware. The LLM inference algo"
+4,cpu-opt-2,paraphrase_2,2594.979199999216,36,"
+
+The following code snippet shows how to use the following code snippet to generate a sim"
+4,cpu-opt-3,canonical,2604.1504999993776,36,"
+
+The KV-cache is a simple, fast, and efficient way to generate a KV-cache. It is a simple"
+4,cpu-opt-3,exact_repeat_1,2639.417300000787,36,"
+
+The KV-cache is a simple, fast, and efficient way to generate a KV-cache. It is a simple"
