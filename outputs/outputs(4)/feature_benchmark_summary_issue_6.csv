@@ -1,0 +1,2 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#6 memory and cpu profiling,simulated,2026-04-09T04:24:41.911314+00:00,Process CPU/RSS profiling,161.88117103786078,162.49905338553486,6.177370682388503,43.56666666666666,324.939776,0.45175438596491224,Per-query CPU% and RSS memory collection

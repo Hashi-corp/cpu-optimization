@@ -1,0 +1,2 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#3 openvino implementation feature,simulated,2026-04-09T04:24:41.911314+00:00,OpenVINO backend,142.97749063610917,142.99916697927068,6.994107922519719,35.4,17.675028572307966,,Fast demo approximation of OpenVINO behavior

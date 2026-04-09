@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-04-09T04:24:50.873725+00:00",
+  "mode": "fast-demo",
+  "runtime_seconds": 33.217,
+  "artifact_count": 22,
+  "artifacts": [
+    "feature_benchmark_dashboard.png",
+    "feature_benchmark_summary.csv",
+    "feature_benchmark_trace.csv",
+    "semantic_cache_hit_breakdown.png",
+    "semantic_cache_latency_comparison.png",
+    "semantic_cache_query_savings.png",
+    "semantic_cache_summary.csv",
+    "semantic_cache_trace.csv",
+    "feature_benchmark_summary_issue_3.csv",
+    "feature_benchmark_dashboard_issue_3.png",
+    "feature_benchmark_summary_issue_4.csv",
+    "feature_benchmark_dashboard_issue_4.png",
+    "feature_benchmark_summary_issue_5.csv",
+    "feature_benchmark_dashboard_issue_5.png",
+    "feature_benchmark_summary_issue_6.csv",
+    "feature_benchmark_dashboard_issue_6.png",
+    "feature_benchmark_summary_issue_7.csv",
+    "feature_benchmark_dashboard_issue_7.png",
+    "feature_benchmark_summary_issue_8.csv",
+    "feature_benchmark_dashboard_issue_8.png",
+    "feature_benchmark_summary_issue_9.csv",
+    "feature_benchmark_dashboard_issue_9.png"
+  ],
+  "final_summary": "final_demo_summary.txt"
+}

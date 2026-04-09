@@ -1,0 +1,17 @@
+CPU Optimization Demo Final Summary
+===================================
+Generated at (UTC): 2026-04-09T04:05:20.996087Z
+Run mode: fast-demo
+Total runtime (seconds): 50.06
+
+Semantic Cache Benchmark:
+- Best strategy by avg latency: Semantic Cache
+- Avg latency (ms): 64.4
+- Speedup vs baseline: 2.64x
+- Hit rate (%): 62.5
+
+Feature Benchmark (#3-#9):
+- Best strategy by latency: Speculative decode
+- Issue: #4 speculative decoding
+- Latency (ms): 128.57263447337502
+- Throughput (qps): 7.777704828838062

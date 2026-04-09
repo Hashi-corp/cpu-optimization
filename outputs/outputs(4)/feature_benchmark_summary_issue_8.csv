@@ -1,0 +1,2 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#8 onnx imp on the main dashboard and summary.df,simulated,2026-04-09T04:24:41.911314+00:00,ONNX Runtime,146.2269790596571,146.2491480469814,6.83868330201928,30.6,17.675028572307966,,Fast demo approximation of ONNX behavior

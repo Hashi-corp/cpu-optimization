@@ -61,6 +61,28 @@ For the issue-specific feature runner, execute one issue at a time from the `cpu
 .\.venv\Scripts\python .\cpu_optimization_feature_benchmark.py --issue 9
 ```
 
+### One-Command Judge Demo (Fast)
+
+Use this command to generate all core benchmark outputs in one run and archive each run under a new numbered folder.
+
+```powershell
+.\.venv\Scripts\python .\run_all_outputs_demo.py
+```
+
+What it does:
+
+- Runs both `semantic_cache_extension.py` and `cpu_optimization_feature_benchmark.py`
+- Uses fast demo mode by default for reliable sub-minute output generation
+- Creates `outputs/outputs(1)`, `outputs/outputs(2)`, ... on every run
+- Copies generated CSV and PNG artifacts into that run folder
+- Generates `final_demo_summary.txt` and `run_manifest.json` in the run folder
+
+If you want the full native path instead of fast demo mode:
+
+```powershell
+.\.venv\Scripts\python .\run_all_outputs_demo.py --full
+```
+
 ## Outputs
 
 Core benchmark outputs:

@@ -1,0 +1,4 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#5 multithreading implementation,simulated,2026-04-09T04:24:41.911314+00:00,Threads=1,161.62645962297663,162.49905338553486,6.187105764320294,49.0,324.599808,,Thread tuning with torch intra/inter-op settings
+#5 multithreading implementation,simulated,2026-04-09T04:24:41.911314+00:00,Threads=3,161.62645962297663,162.49905338553486,6.187105764320294,50.0,324.939776,,Thread tuning with torch intra/inter-op settings
+#5 multithreading implementation,simulated,2026-04-09T04:24:41.911314+00:00,Threads=6,161.62645962297663,162.49905338553486,6.187105764320294,75.6,324.939776,,Thread tuning with torch intra/inter-op settings

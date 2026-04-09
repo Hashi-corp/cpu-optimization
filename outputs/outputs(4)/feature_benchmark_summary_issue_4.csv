@@ -1,0 +1,3 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#4 speculative decoding,simulated,2026-04-09T04:24:41.911314+00:00,Standard decode,161.88117103786078,162.49905338553486,6.177370682388503,21.6,17.5722800980393,0.45175438596491224,Reference path
+#4 speculative decoding,simulated,2026-04-09T04:24:41.911314+00:00,Speculative decode,127.00269887530376,132.3766452347817,7.873848420983866,22.2,17.337081253194363,0.5745614035087719,Assistant-model speculative generation

@@ -8,7 +8,7 @@ Baseline,6,cpu-opt-2,canonical,miss,168.13503485078456,9,19.033479627881018,Simu
 Baseline,7,cpu-opt-2,exact_repeat_1,miss,168.13503485078456,9,19.033479627881018,Simulated response for: Describe why quantization helps large language m
 Baseline,8,cpu-opt-2,exact_repeat_2,miss,168.13503485078456,9,19.033479627881018,Simulated response for: Describe why quantization helps large language m
 Exact Cache,1,cpu-opt-1,canonical,miss,172.10664861474606,9,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
-Exact Cache,2,cpu-opt-1,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Exact Cache,2,cpu-opt-1,exact_repeat_1,exact_hit,0.023700000042481406,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
 Exact Cache,3,cpu-opt-1,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
 Exact Cache,4,cpu-opt-1,paraphrase_1,miss,165.08292095708822,15,23.034922867707476,Simulated response for: How does semantic caching lower repeated CPU inf
 Exact Cache,5,cpu-opt-1,paraphrase_2,miss,174.45302224089895,15,23.044086124303426,Simulated response for: Why can semantic caches reduce the cost of repea
@@ -18,7 +18,7 @@ Exact Cache,8,cpu-opt-2,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response f
 Semantic Cache,1,cpu-opt-1,canonical,miss,172.10664861474606,9,24.28860739409977,Simulated response for: Explain how semantic caching reduces repeated LL
 Semantic Cache,2,cpu-opt-1,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
 Semantic Cache,3,cpu-opt-1,exact_repeat_2,exact_hit,0.02,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
-Semantic Cache,4,cpu-opt-1,paraphrase_1,semantic_hit,0.25,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
+Semantic Cache,4,cpu-opt-1,paraphrase_1,semantic_hit,0.34459999994851387,0,0.0,Simulated response for: Explain how semantic caching reduces repeated LL
 Semantic Cache,5,cpu-opt-1,paraphrase_2,miss,174.45302224089895,15,23.044086124303426,Simulated response for: Why can semantic caches reduce the cost of repea
 Semantic Cache,6,cpu-opt-2,canonical,miss,168.13503485078456,9,19.033479627881018,Simulated response for: Describe why quantization helps large language m
 Semantic Cache,7,cpu-opt-2,exact_repeat_1,exact_hit,0.02,0,0.0,Simulated response for: Describe why quantization helps large language m

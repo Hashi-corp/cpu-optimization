@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-04-09T04:18:51.321935+00:00",
+  "mode": "fast-demo",
+  "runtime_seconds": 49.072,
+  "artifact_count": 8,
+  "artifacts": [
+    "feature_benchmark_dashboard.png",
+    "feature_benchmark_summary.csv",
+    "feature_benchmark_trace.csv",
+    "semantic_cache_hit_breakdown.png",
+    "semantic_cache_latency_comparison.png",
+    "semantic_cache_query_savings.png",
+    "semantic_cache_summary.csv",
+    "semantic_cache_trace.csv"
+  ],
+  "final_summary": "final_demo_summary.txt"
+}

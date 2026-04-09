@@ -1,0 +1,3 @@
+issue,backend_mode,timestamp,strategy,latency_ms,p95_latency_ms,throughput_qps,cpu_percent,memory_mb,distinct1,notes
+#7 generation layer for improved output diversity,simulated,2026-04-09T04:24:41.911314+00:00,Greedy decoding,162.7403333366357,167.05565246753696,6.144758213880851,38.9,19.132843849954295,0.5528846153846154,Adds temperature/top-p/top-k/repetition-penalty layer
+#7 generation layer for improved output diversity,simulated,2026-04-09T04:24:41.911314+00:00,Diverse decoding,167.7150755423103,175.63090273246155,5.962493215153608,33.3,18.12223188531409,0.5438273993808049,Adds temperature/top-p/top-k/repetition-penalty layer

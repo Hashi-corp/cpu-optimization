@@ -1,0 +1,9 @@
+issues_executed,group_id,variant,latency_ms,tokens_generated,response_preview
+"3,4,5,6,7,8,9",cpu-opt-1,canonical,162.49905338553486,16,model cpu quant quant cpu cache serve batch serve serve batch serve model decode token qua
+"3,4,5,6,7,8,9",cpu-opt-1,exact_repeat_1,162.49905338553486,16,model cpu quant quant cpu cache serve batch serve serve batch serve model decode token qua
+"3,4,5,6,7,8,9",cpu-opt-1,exact_repeat_2,162.49905338553486,16,model cpu quant quant cpu cache serve batch serve serve batch serve model decode token qua
+"3,4,5,6,7,8,9",cpu-opt-1,paraphrase_1,162.40052455298255,19,quant latency thread serve latency quant batch thread model latency batch batch thread qua
+"3,4,5,6,7,8,9",cpu-opt-1,paraphrase_2,160.5270161392533,19,serve batch cache model cpu batch cpu decode latency thread serve batch thread batch cache
+"3,4,5,6,7,8,9",cpu-opt-2,canonical,160.86232537832421,19,serve cache token latency model model latency cache quant quant quant model serve model to
+"3,4,5,6,7,8,9",cpu-opt-2,exact_repeat_1,160.86232537832421,19,serve cache token latency model model latency cache quant quant quant model serve model to
+"3,4,5,6,7,8,9",cpu-opt-2,exact_repeat_2,160.86232537832421,19,serve cache token latency model model latency cache quant quant quant model serve model to

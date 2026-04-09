@@ -4,6 +4,7 @@ import gc
 import hashlib
 import json
 import math
+import os
 import re
 import statistics
 import time
@@ -28,9 +29,11 @@ BREAKDOWN_PNG = ROOT / "semantic_cache_hit_breakdown.png"
 SEQUENCE_PNG = ROOT / "semantic_cache_query_savings.png"
 
 MODEL_ID = "gpt2"
-MAX_NEW_TOKENS = 36
-WARMUP_RUNS = 1
+FAST_DEMO = os.getenv("CPU_OPT_FAST_DEMO", "0") == "1"
+MAX_NEW_TOKENS = 18 if FAST_DEMO else 36
+WARMUP_RUNS = 0 if FAST_DEMO else 1
 SEMANTIC_THRESHOLD = 0.35
+WORKLOAD_LIMIT = 8 if FAST_DEMO else None
 
 sns.set_theme(style="whitegrid")
 plt.rcParams.update({
@@ -175,10 +178,12 @@ def load_workload(path: Path = WORKLOAD_PATH) -> List[QueryItem]:
             queries.append(QueryItem(group_id=group["id"], variant=f"exact_repeat_{repeat_idx + 1}", prompt=canonical))
         for para_idx, paraphrase in enumerate(group.get("paraphrases", []), start=1):
             queries.append(QueryItem(group_id=group["id"], variant=f"paraphrase_{para_idx}", prompt=paraphrase))
-    return queries
+    return queries[:WORKLOAD_LIMIT] if WORKLOAD_LIMIT else queries
 
 
 def build_backend() -> Tuple[InferenceBackend, Optional[str]]:
+    if FAST_DEMO:
+        return SimulatedBackend(), "Forced simulated backend for fast demo mode (CPU_OPT_FAST_DEMO=1)"
     try:
         return HuggingFaceBackend(MODEL_ID), None
     except Exception as exc:  # pragma: no cover - fallback is intentional for quick verification
